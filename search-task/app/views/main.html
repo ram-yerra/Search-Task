@@ -1,0 +1,66 @@
+<div class="main-container full-width">
+  <div class="main-header full-width align-center">
+    <span> Sample </span>
+  </div>
+  <div class="main-header main-sub-header full-width align-right">
+    <input type="search" class="search-txt" ng-model="searchProduct" />
+  </div>
+  <div class="full-width main-sub-radio-header align-right">
+    <div class="float-right">
+      <input type="radio" ng-model="searchType" name="searchType" value="" ng-change='newSearchRadioValue(value)'> Relevance <br>
+    </div>
+    <div class="float-right">
+      <input type="radio" ng-model="searchType" name="searchType" value="popular" ng-change='newSearchRadioValue(value)'> Popular<br>
+    </div>
+    <div class="float-right">
+      <input type="radio" ng-model="searchType" name="searchType" value="lowprice" ng-change='newSearchRadioValue(value)'> Low Price<br>
+    </div>
+    <div class="float-right">
+      <input type="radio" ng-model="searchType" name="searchType" value="highprice" ng-change='newSearchRadioValue(value)'> High Price<br>
+    </div>
+    <div class="float-right">
+      <input type="radio" ng-model="searchType" name="searchType" value="new" ng-change='newSearchRadioValue(value)'> New<br>
+    </div>
+  </div>
+  <div class="main-content">
+    <p class="align-center full-width p-no-results" ng-show="(products | filter:searchProduct).length == 0">No products found!</p>    
+    <div class="row-products" ng-repeat="product in products | filter:searchProduct | orderBy: searchOrder">
+      <div class="product-container">
+        <div class="align-center product-name text-name-ellipsis">
+          {{product.name}} ({{product.color}})
+        </div>
+        <div class="align-center product-image">
+          <img class="img-product" src="../images/{{product.image}}" />
+        </div>
+        <div class="align-center product-stars"> 
+            <div product-rating rating-value="product.rating" max="5" ></div>
+            <div class="text-ellipsis">
+              {{product.rating}} out of  5 ({{product.ratingcount}} ratings)
+            </div>
+        </div>
+        <div class="product-price text-ellipsis">
+          Rs. {{product.price | number:2}}
+        </div>
+        <div class="product-specs">
+          <ul class="product-spec" ng-repeat="spec in product.specification">
+            <li class="text-ellipsis">
+              <div>{{spec.camera}}</div>
+            </li>
+            <li class="text-ellipsis">
+              {{spec.rom}} ROM, {{spec.ram}} RAM  
+            </li>
+            <li class="text-ellipsis">            
+              {{spec.size}} screen
+            </li>
+            <li class="text-ellipsis">
+              {{spec.battery}} battery
+            </li>
+          </ul>
+        </div>
+        <div class="product-compare">
+          <input type="checkbox" name="product.name" value="product.name">Add to compare<br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

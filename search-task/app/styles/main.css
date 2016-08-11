@@ -1,0 +1,129 @@
+
+body {
+  padding: 0;
+  margin:0;
+  font-family: wf_segoe-ui_normal, Verdana, Geneva, Tahoma, sans-serif;
+  color:#666666;
+}
+.full-width {
+  width: 100%;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.align-justify {
+  text-align: justify;
+}
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-name-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-header {
+  background-color: #294E80;
+  height:40px;
+  line-height:40px;
+  font-size:16px;
+  color:white;
+}
+.main-sub-header {
+  background-color: #eaeef3;
+  color:black;
+}
+.main-sub-radio-header {  
+  height: 60px;
+}
+.main-sub-radio-header div {  
+  margin-top: 10px;
+  padding-left: 5%;
+}
+.search-txt {
+  height:33px;
+  background-image: url("../images/Search-24.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 10px;
+  padding-right: 25px;
+  border-radius: 5px;
+}
+.product-container {
+  padding:10%;
+}
+.img-product {
+  width:100%;
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+}
+.row-products {
+  width:32%;
+  float:left;
+  border: 1px solid #C6C6C6;
+  margin:0.33%;
+}
+.product-name {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.product-image {
+  padding-bottom: 10px; 
+}
+.rating {
+  color: #a9a9a9;
+  margin: 0;
+  padding: 0;
+}
+ul.rating {
+  display: inline-block;
+}
+.rating li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.rating .filled {
+  color: red;
+}
+.product-stars {
+  padding-bottom:10px;
+}
+.product-price {
+  border-top: 1px solid #C6C6C6;
+  font-weight: bold;
+  padding-top:10px;
+  padding-bottom:10px;
+  border-bottom: 1px solid #C6C6C6;
+}
+.product-spec {
+  padding-left:0;
+  list-style-position:inside;  
+}
+.product-compare {
+  padding-top: 10px;
+  border-top: 1px solid #C6C6C6;
+}
+.p-no-results {
+  font-weight: bold;
+  font-size:24px;
+}
